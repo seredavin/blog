@@ -1,8 +1,6 @@
 package com.kihaev.blog.entity;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,14 +10,19 @@ import java.util.Date;
 
 @Entity
 @Data
-public class BlogPost {
+public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private long id;
 
-    private String name;
+    private String role;
 
-    private String text;
+    private String firstName;
 
-    private Date date;
+    private String lastName;
+
+    private Date birthday;
+
+    private String email;
 }
